@@ -1,0 +1,463 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+/* Base Styles */
+:root {
+  --primary-color: #f7b731;
+  --primary-color-dark: #e8a925;
+  --secondary-color: #333333;
+  --gray-light: #f5f5f5;
+  --gray-medium: #e0e0e0;
+  --gray-dark: #555555;
+  --text-color: #333333;
+  --white: #ffffff;
+  --black: #000000;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px; /* Adjusted for better consistency */
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --border-radius: 4px;
+  --container-width: 1200px;
+  --font-family-main: 'Manrope', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  line-height: 1.6; /* Slightly increased for Manrope */
+  color: var(--text-color);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md); /* Consistent padding */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.3; /* Adjusted for Manrope */
+ 
+}
+
+h1 {
+  font-size: 42px; /* Slightly adjusted */
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: 28px; /* Slightly adjusted */
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+h3.section-title { /* Specific styling for section titles */
+  font-size: 32px;
+  margin-bottom: var(--spacing-lg); /* More space after section title */
+  text-align: center;
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+h3.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+h3 { /* General h3 */
+  font-size: 26px;
+  margin-bottom: var(--spacing-sm);
+}
+
+
+h4 {
+  font-size: 20px; /* Slightly adjusted */
+  margin-bottom: var(--spacing-xs);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Section Styles */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 700; /* Bolder for Manrope */
+  padding: 12px 28px; /* Slightly wider */
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  text-transform: uppercase; /* Optional, but common with such buttons */
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-color: var(--secondary-color);
+}
+
+.btn-large {
+  padding: 14px 32px; /* Slightly wider */
+  font-size: 18px;
+}
+
+/* Forms */
+input, select, textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  /* margin-bottom: var(--spacing-md); Removed, handled by form-group */
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-family: var(--font-family-main); /* Ensure form elements use the main font */
+  transition: var(--transition);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(247, 183, 49, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: flex;
+  gap: var(--spacing-md);
+  /* margin-bottom: 0; */ /* Let form-group handle bottom margin if items are not in a row */
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0; /* No margin if it's part of a row that has its own spacing */
+}
+.form-row + .form-group { /* Add margin if a single group follows a row */
+    margin-top: var(--spacing-md);
+}
+
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+  position: relative; /* For icon positioning */
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-dark);
+    pointer-events: none; /* So it doesn't interfere with input click */
+}
+.form-group input,
+.form-group textarea {
+    padding-left: 40px; /* Space for the icon */
+}
+.form-group select { /* Select doesn't usually have icons like this */
+    padding-left: 16px;
+}
+.form-group textarea i {
+    top: 20px; /* Adjust for textarea */
+    transform: translateY(0);
+}
+
+
+.form-agreement {
+  display: flex;
+  align-items: center; /* Vertically align checkbox and label */
+  margin-bottom: var(--spacing-md);
+}
+
+.form-agreement input[type="checkbox"] {
+  width: auto;
+  margin-right: var(--spacing-xs);
+  margin-bottom: 0; /* Remove default margin from input */
+  /* margin-top: 4px; /* Adjust alignment if needed */
+}
+.form-agreement label {
+    font-size: 14px;
+    color: var(--gray-dark);
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+input.error, textarea.error, select.error {
+    border-color: red !important;
+}
+
+.success-message {
+    text-align: center;
+    padding: var(--spacing-lg);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: #fef8e7;
+}
+.success-message svg {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+.success-message h4 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+}
+.success-message p {
+    color: var(--gray-dark);
+    margin-bottom: 0;
+}
+
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-4px);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  padding: var(--spacing-md); /* Padding for smaller screens */
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 500px;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  position: relative;
+  transform: translateY(-50px) scale(0.95);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0; /* Start hidden for transition */
+}
+
+.modal.show .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1; /* Fade in */
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px; /* Adjusted for better placement */
+  right: 15px; /* Adjusted for better placement */
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--gray-dark);
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
+
+.modal h3 {
+  margin-bottom: var(--spacing-sm); /* Increased margin */
+  text-align: center;
+}
+
+.modal p {
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  color: var(--gray-dark);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+
+/* Responsive */
+@media (max-width: 991px) {
+  :root {
+    --spacing-md: 20px;
+    --spacing-lg: 28px;
+    --spacing-xl: 40px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3.section-title {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+  }
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3.section-title {
+    font-size: 24px;
+  }
+   h3 {
+    font-size: 20px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0; /* Let form-group handle spacing */
+  }
+  .form-row .form-group {
+    margin-bottom: var(--spacing-md); /* Add back margin when stacked */
+  }
+  .btn-large {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+  .modal-content {
+      max-width: 90%;
+  }
+}

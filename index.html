@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Барьер Плюс - Автоматические шлагбаумы и ворота</title>
+  <meta name="description" content="Профессиональная установка автоматических шлагбаумов и ворот. Качественное оборудование, гарантия, сервисное обслуживание.">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  <header id="header">
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-text">
+          <h3>Барьер<span>Плюс</span></h3>
+          <p>Автоматические системы</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#promo">Акция</a></li>
+          <li><a href="#portfolio">Наши работы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-contact">
+        <a href="tel:+74951234567" class="phone">+7 (495) 123-45-67</a>
+        <button class="btn-primary request-btn">Оставить заявку</button>
+      </div>
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <div class="container">
+      <ul>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#promo">Акция</a></li>
+        <li><a href="#portfolio">Наши работы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <div class="mobile-contact">
+        <a href="tel:+74951234567" class="phone">+7 (495) 123-45-67</a>
+        <button class="btn-primary request-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="banner" class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/baneer.webp');">
+      <div class="container banner-container">
+        <div class="banner-content">
+          <h1>Автоматические шлагбаумы и ворота</h1>
+          <h2>Установка и обслуживание под ключ в Москве и области</h2>
+          <button class="btn-primary btn-large">Получить консультацию</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h3 class="section-title">Наши услуги</h3>
+        <div class="services-grid">
+          <div class="service-item" data-aos="fade-up">
+            <div class="service-icon">
+              <img src="./img/0111011.webp" alt="Шлагбаумы" title="Установка шлагбаумов">
+            </div>
+            <h4>Автоматические шлагбаумы</h4>
+            <p>Профессиональная установка шлагбаумов любой сложности с гарантией качества</p>
+            <a href="#" class="btn-secondary">Подробнее</a>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <img src="./img/i.webp" alt="Ворота" title="Установка ворот">
+            </div>
+            <h4>Автоматические ворота</h4>
+            <p>Откатные, распашные и секционные ворота с автоматикой под ключ</p>
+            <a href="#" class="btn-secondary">Подробнее</a>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <img src="./img/i (1).webp" alt="Обслуживание" title="Сервисное обслуживание">
+            </div>
+            <h4>Сервисное обслуживание</h4>
+            <p>Регулярное обслуживание и оперативный ремонт автоматических систем</p>
+            <a href="#" class="btn-secondary">Подробнее</a>
+          </div>
+          <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <img src="./img/chto-takoe-skud.webp" alt="СКУД" title="Системы контроля доступа">
+            </div>
+            <h4>Системы контроля доступа</h4>
+            <p>Современные системы контроля и управления доступом для вашего объекта</p>
+            <a href="#" class="btn-secondary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-block" class="section cta-block" style="background-color: var(--gray-light); padding: var(--spacing-lg) 0;">
+        <div class="container">
+            <div class="cta-block-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h3 class="section-title" style="margin-bottom: var(--spacing-sm);">Закажите установку шлагбаума сегодня!</h3>
+                <p style="margin-bottom: var(--spacing-md);">Получите надежное решение для контроля доступа на вашу территорию. Заполните форму ниже, и мы свяжемся с вами для бесплатной консультации.</p>
+                <form id="cta-form-inline">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name_cta" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone_cta" placeholder="Ваш телефон" required>
+                        </div>
+                    </div>
+                    <div class="form-agreement" style="justify-content: center;">
+                        <input type="checkbox" id="agreement_cta" name="agreement_cta" required>
+                        <label for="agreement_cta">Я согласен на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h3 class="section-title">О компании</h3>
+        <div class="about-container">
+          <div class="about-image" data-aos="fade-right">
+            <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="О компании БарьерПлюс" title="Компания БарьерПлюс">
+          </div>
+          <div class="about-content" data-aos="fade-left">
+            <p>Компания <strong>БарьерПлюс</strong> специализируется на поставке, монтаже и обслуживании автоматических шлагбаумов, ворот и систем контроля доступа.</p>
+            <p>Мы работаем на рынке более 10 лет и за это время реализовали более 1000 проектов различной сложности.</p>
+            <p>Наши специалисты имеют высокую квалификацию и регулярно проходят обучение у производителей оборудования.</p>
+            <p>Мы гарантируем качество нашей работы и предоставляем сервисное обслуживание установленного оборудования.</p>
+            <a href="#" class="btn-primary">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="statistics" class="section statistics">
+      <div class="container">
+        <h3 class="section-title">Преимущества в цифрах</h3>
+        <div class="stats-container">
+          <div class="stat-item" data-aos="zoom-in">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-label">лет на рынке</div>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-number" data-count="1000">0</div>
+            <div class="stat-label">выполненных проектов</div>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-number" data-count="24">0</div>
+            <div class="stat-label">часа сервис</div>
+          </div>
+          <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">года гарантии</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process">
+      <div class="container">
+        <h3 class="section-title">Как мы работаем</h3>
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Заявка</h4>
+              <p>Вы оставляете заявку на сайте или звоните нам по телефону</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Выезд на объект</h4>
+              <p>Наш специалист выезжает на объект для консультации и замеров</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Коммерческое предложение</h4>
+              <p>Составляем КП с подбором оптимального оборудования</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Монтаж</h4>
+              <p>Выполняем монтажные работы в согласованные сроки</p>
+            </div>
+          </div>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Сервисное обслуживание</h4>
+              <p>Обеспечиваем гарантийное и постгарантийное обслуживание</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="promo" class="section promo">
+      <div class="container">
+        <div class="promo-container" data-aos="zoom-in">
+          <div class="promo-content">
+            <h3>Акция месяца</h3>
+            <h4>Скидка 15% на установку шлагбаума</h4>
+            <p>При заказе монтажа автоматического шлагбаума до конца месяца получите скидку 15% на монтажные работы</p>
+            <button class="btn-primary">Получить скидку</button>
+          </div>
+          <div class="promo-timer">
+            <div class="timer-item">
+              <div class="timer-value" id="days">00</div>
+              <div class="timer-label">Дней</div>
+            </div>
+            <div class="timer-item">
+              <div class="timer-value" id="hours">00</div>
+              <div class="timer-label">Часов</div>
+            </div>
+            <div class="timer-item">
+              <div class="timer-value" id="minutes">00</div>
+              <div class="timer-label">Минут</div>
+            </div>
+            <div class="timer-item">
+              <div class="timer-value" id="seconds">00</div>
+              <div class="timer-label">Секунд</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section advantages">
+      <div class="container">
+        <h3 class="section-title">Почему выбирают нас</h3>
+        <div class="advantages-grid">
+          <div class="advantage-item" data-aos="fade-up">
+            <div class="advantage-icon">
+              <img src="./img/i (6).webp" alt="Качественное оборудование" title="Качественное оборудование">
+            </div>
+            <h4>Качественное оборудование</h4>
+            <p>Работаем только с проверенными производителями оборудования</p>
+          </div>
+          <div class="advantage-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="advantage-icon">
+              <img src="./img/i (7).webp" alt="Расширенная гарантия" title="Расширенная гарантия">
+            </div>
+            <h4>Расширенная гарантия</h4>
+            <p>Предоставляем гарантию до 3 лет на оборудование и монтажные работы</p>
+          </div>
+          <div class="advantage-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="advantage-icon">
+              <img src="./img/i (8).webp" alt="Оперативный сервис" title="Оперативный сервис">
+            </div>
+            <h4>Оперативный сервис</h4>
+            <p>Выезд мастера в течение 24 часов после обращения</p>
+          </div>
+          <div class="advantage-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="advantage-icon">
+              <img src="./img/i (9).webp" alt="Богатый опыт" title="Богатый опыт">
+            </div>
+            <h4>Богатый опыт</h4>
+            <p>Более 10 лет опыта работы и более 1000 реализованных проектов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h3 class="section-title">Наши работы</h3>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="barriers">Шлагбаумы</button>
+          <button class="filter-btn" data-filter="gates">Ворота</button>
+          <button class="filter-btn" data-filter="access">СКУД</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item barriers" data-aos="fade-up">
+            <div class="portfolio-image">
+              <img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Шлагбаум для жилого комплекса" title="Установка шлагбаума в ЖК">
+              <div class="portfolio-overlay">
+                <h4>Шлагбаум для жилого комплекса</h4>
+                <p>Монтаж автоматического шлагбаума с системой распознавания номеров</p>
+                <a href="#" class="btn-secondary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item gates" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-image">
+              <img src="https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Откатные ворота для частного дома" title="Установка откатных ворот">
+              <div class="portfolio-overlay">
+                <h4>Откатные ворота для частного дома</h4>
+                <p>Изготовление и монтаж откатных ворот с автоматикой</p>
+                <a href="#" class="btn-secondary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item access" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-image">
+              <img src="https://images.pexels.com/photos/3661197/pexels-photo-3661197.jpeg?auto=compress&cs=tinysrgb&w=800" alt="СКУД для офисного здания" title="Монтаж СКУД">
+              <div class="portfolio-overlay">
+                <h4>СКУД для офисного здания</h4>
+                <p>Установка системы контроля доступа с интеграцией видеонаблюдения</p>
+                <a href="#" class="btn-secondary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item barriers" data-aos="fade-up" data-aos-delay="300">
+            <div class="portfolio-image">
+              <img src="https://images.pexels.com/photos/5473960/pexels-photo-5473960.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Шлагбаум для парковки" title="Монтаж шлагбаума для парковки">
+              <div class="portfolio-overlay">
+                <h4>Шлагбаум для парковки</h4>
+                <p>Установка автоматического шлагбаума с дистанционным управлением</p>
+                <a href="#" class="btn-secondary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item gates" data-aos="fade-up" data-aos-delay="400">
+            <div class="portfolio-image">
+              <img src="https://images.pexels.com/photos/532001/pexels-photo-532001.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Распашные ворота для предприятия" title="Установка распашных ворот">
+              <div class="portfolio-overlay">
+                <h4>Распашные ворота для предприятия</h4>
+                <p>Монтаж распашных ворот с автоматикой и системой контроля доступа</p>
+                <a href="#" class="btn-secondary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item access" data-aos="fade-up" data-aos-delay="500">
+            <div class="portfolio-image">
+              <img src="https://images.pexels.com/photos/3205735/pexels-photo-3205735.jpeg?auto=compress&cs=tinysrgb&w=800" alt="СКУД для складского комплекса" title="Монтаж СКУД для склада">
+              <div class="portfolio-overlay">
+                <h4>СКУД для складского комплекса</h4>
+                <p>Установка комплексной системы контроля доступа с учетом рабочего времени</p>
+                <a href="#" class="btn-secondary">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners" class="section partners">
+      <div class="container">
+        <h3 class="section-title">Наши партнеры</h3>
+        <div class="partners-slider">
+          <div class="partners-track">
+            <div class="partner-item">
+              <img src="./img/AIC Icon - Commercial Issues - Green RGB.jpg" alt="Партнер 1" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (2).webp" alt="Партнер 2" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (3).webp" alt="Партнер 3" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (4).webp" alt="Партнер 4" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (5).webp" alt="Партнер 5" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/Advantages_image-min.webp" alt="Партнер 6" title="Партнер компании">
+            </div>
+             <div class="partner-item">
+              <img src="./img/AIC Icon - Commercial Issues - Green RGB.jpg" alt="Партнер 1" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (2).webp" alt="Партнер 2" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (3).webp" alt="Партнер 3" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (4).webp" alt="Партнер 4" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/i (5).webp" alt="Партнер 5" title="Партнер компании">
+            </div>
+            <div class="partner-item">
+              <img src="./img/Advantages_image-min.webp" alt="Партнер 6" title="Партнер компании">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section contacts">
+      <div class="container">
+        <h3 class="section-title"> Контакты</h3>
+        <div class="contacts-container">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Адрес</h4>
+                <p>г. Москва, ул. Примерная, д. 123</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Телефон</h4>
+                <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p><a href="mailto:info@barrierplus.ru">info@barrierplus.ru</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Часы работы</h4>
+                <p>Пн-Пт: 9:00 - 18:00<br>Сб: 10:00 - 15:00</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link" title="Мы ВКонтакте">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a href="#" class="social-link" title="Мы в Telegram">
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="#" class="social-link" title="Мы в WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-map" data-aos="fade-left">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0271378907236!2d37.62170121608014!3d55.75362998055753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2s!4v1653644812345!5m2!1sru!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+        <div class="container">
+            <h3 class="section-title">Вопросы и ответы</h3>
+            <div class="faq-container" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Какие типы шлагбаумов вы устанавливаете?</h4>
+                        <div class="faq-toggle"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы устанавливаем автоматические, механические, гидравлические и электромеханические шлагбаумы различных производителей, подходящие для жилых комплексов, парковок, промышленных объектов и частных территорий.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Сколько времени занимает установка шлагбаума?</h4>
+                        <div class="faq-toggle"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Стандартная установка шлагбаума обычно занимает от 4 до 8 часов, в зависимости от сложности объекта и необходимости проведения дополнительных работ (например, прокладка кабеля, бетонирование основания).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Предоставляете ли вы гарантию на оборудование и работы?</h4>
+                        <div class="faq-toggle"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, мы предоставляем официальную гарантию от производителя на все оборудование (обычно от 1 до 3 лет), а также гарантию на монтажные работы до 3 лет.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Что входит в сервисное обслуживание?</h4>
+                        <div class="faq-toggle"><span></span><span></span></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Сервисное обслуживание включает плановый осмотр, диагностику, чистку и смазку механизмов, проверку и настройку электронных компонентов, а также оперативный ремонт в случае неисправностей.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form" class="section contact-form">
+      <div class="container">
+        <div class="form-container" data-aos="zoom-in">
+          <h3><i class="fas fa-question-circle"></i> Остались вопросы?</h3>
+          <p>Заполните форму и наш специалист свяжется с вами в ближайшее время</p>
+          <form id="feedback-form">
+            <div class="form-row">
+              <div class="form-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+              </div>
+              <div class="form-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" name="email" placeholder="Ваш email">
+            </div>
+            <div class="form-group">
+              <i class="fas fa-comment"></i>
+              <textarea name="message" placeholder="Ваш вопрос или комментарий" rows="4"></textarea>
+            </div>
+            <div class="form-agreement">
+              <input type="checkbox" id="agreement" name="agreement" required>
+              <label for="agreement">Я согласен на обработку персональных данных</label>
+            </div>
+            <button type="submit" class="btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Отправить
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <div class="logo-text">
+            <h3>Барьер<span>Плюс</span></h3>
+            <p>Автоматические системы</p>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h4>Услуги</h4>
+            <ul>
+              <li><a href="#">Шлагбаумы</a></li>
+              <li><a href="#">Ворота</a></li>
+              <li><a href="#">СКУД</a></li>
+              <li><a href="#">Обслуживание</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Информация</h4>
+            <ul>
+              <li><a href="#about">О компании</a></li>
+              <li><a href="#portfolio">Наши работы</a></li>
+              <li><a href="#partners">Партнеры</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <ul class="footer-contacts">
+              <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:info@barrierplus.ru">info@barrierplus.ru</a></li>
+              <li>г. Москва, ул. Примерная, д. 123</li>
+              <li>Пн-Пт: 9:00 - 18:00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>© <span id="currentYear"></span> БарьерПлюс. Все права защищены.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Пользовательское соглашение</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-link" title="Мы ВКонтакте" aria-label="VKontakte">
+            <i class="fab fa-vk fa-2x"></i>
+          </a>
+          <a href="#" class="social-link" title="Мы в Telegram" aria-label="Telegram">
+            <i class="fab fa-telegram fa-2x"></i>
+          </a>
+          <a href="#" class="social-link" title="Мы в WhatsApp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="request-modal">
+    <div class="modal-content">
+      <div class="modal-close">×</div>
+      <h3>Оставить заявку</h3>
+      <p>Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+      <form id="modal-form">
+        <div class="form-group">
+          <input type="text" name="name_modal" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone_modal" placeholder="Ваш телефон" required>
+        </div>
+        <div class="form-group">
+          <select name="service_modal" required>
+            <option value="" disabled selected>Выберите услугу</option>
+            <option value="barrier">Шлагбаумы</option>
+            <option value="gate">Ворота</option>
+            <option value="access">СКУД</option>
+            <option value="service">Сервисное обслуживание</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea name="message_modal" placeholder="Ваш комментарий" rows="3"></textarea>
+        </div>
+        <div class="form-agreement">
+          <input type="checkbox" id="modal-agreement" name="agreement_modal" required>
+          <label for="modal-agreement">Я согласен на обработку персональных данных</label>
+        </div>
+        <button type="submit" class="btn-primary btn-large">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="back-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+/* sections.css */
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* More responsive */
+  gap: var(--spacing-md);
+}
+
+.service-item {
+  background-color: var(--white);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* For equal height cards if needed */
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  margin: 0 auto var(--spacing-sm); /* Center icon and add bottom margin */
+  width: 100px; /* Fixed width for icon container */
+  height: 100px; /* Fixed height for icon container */
+}
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or contain, depending on icons */
+  border-radius: 15px; /* Adjusted radius */
+}
+
+.service-item h4 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+.service-item p {
+  margin-bottom: var(--spacing-md);
+  min-height: 60px; /* Adjusted min-height */
+  flex-grow: 1; /* Allow p to grow and push button down */
+  color: var(--gray-dark);
+}
+.service-item .btn-secondary {
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+/* CTA Block Section (New) */
+.cta-block-content h3.section-title {
+    margin-bottom: var(--spacing-sm) !important; /* Override general section title margin */
+}
+.cta-block-content h3.section-title::after {
+    display: none; /* No underline for this specific CTA title if preferred */
+}
+.cta-block-content p {
+    font-size: 18px;
+    color: var(--gray-dark);
+    line-height: 1.7;
+}
+#cta-form-inline .form-group {
+    margin-bottom: var(--spacing-md); /* Spacing between rows in the form */
+}
+#cta-form-inline .form-agreement {
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+
+/* About Section */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Give more space to text */
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-height: 450px; /* Control image height */
+  object-fit: cover;
+}
+
+.about-content p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.7;
+  color: var(--gray-dark);
+}
+.about-content p strong {
+    color: var(--secondary-color);
+}
+
+.about-content .btn-primary {
+  margin-top: var(--spacing-md); /* More space before button */
+}
+
+/* Statistics Section */
+.statistics {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: var(--spacing-xl) 0;
+}
+
+.statistics .section-title {
+  color: var(--white);
+}
+.statistics .section-title::after {
+  background-color: var(--primary-color); /* Ensure underline is primary color */
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  text-align: center;
+}
+
+.stat-item {
+  padding: var(--spacing-md) var(--spacing-sm); /* Adjust padding */
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Process Section */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative; /* For the main timeline bar */
+}
+/* Main timeline bar (optional, if you want a single bar behind all) */
+/* .process-steps::before {
+  content: "";
+  position: absolute;
+  top: 20px; 
+  left: 19px; 
+  width: 2px;
+  height: calc(100% - 40px); 
+  background-color: var(--primary-color-dark); 
+  z-index: 0;
+} */
+
+
+.process-step {
+  display: flex;
+  align-items: flex-start; /* Align icon with top of text */
+  margin-bottom: var(--spacing-lg);
+  position: relative; /* For individual step connectors */
+  padding-left: 60px; /* Space for number and line */
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+/* Connector line for each step */
+.process-step::before {
+  content: "";
+  position: absolute;
+  top: 20px; /* Center of the number */
+  left: 19px; /* Center of the number horizontally */
+  width: 2px;
+  height: 100%; /* Extends down from the number */
+  background-color: var(--primary-color);
+  z-index: 1; /* Above main timeline, below number */
+}
+.process-step:last-child::before {
+  display: none; /* No line after the last step */
+}
+
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* margin-right: var(--spacing-md); No longer needed due to padding-left on process-step */
+  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2; /* Above the line */
+}
+
+.step-content h4 {
+  margin-bottom: var(--spacing-xs);
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+.step-content p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Promo Section */
+.promo {
+    background-color: var(--gray-light); /* Light bg for contrast */
+}
+.promo-container {
+  background-color: var(--primary-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 2fr 1.5fr; /* Adjust column ratio */
+  gap: var(--spacing-lg);
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.promo-content h3,
+.promo-content h4 {
+  color: var(--white);
+  margin-bottom: var(--spacing-sm);
+}
+.promo-content h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.promo-content h4 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.promo-content p {
+  margin-bottom: var(--spacing-md);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+}
+
+.promo-content .btn-primary {
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.promo-content .btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.promo-timer {
+  display: flex;
+  justify-content: space-around; /* Better spacing for timer items */
+  gap: var(--spacing-sm);
+}
+
+.timer-item {
+  background-color: rgba(0, 0, 0, 0.15); /* Darker for better contrast */
+  padding: var(--spacing-sm) var(--spacing-xs); /* Adjust padding */
+  border-radius: var(--border-radius);
+  min-width: 70px;
+  text-align: center;
+}
+
+.timer-value {
+  font-size: 32px; /* Larger timer value */
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px; /* Less space */
+}
+
+.timer-label {
+  font-size: 12px; /* Smaller label */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Advantages Section */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.advantage-item {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--white); /* Ensure white background */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; Remove to allow natural flow */
+}
+
+.advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-icon {
+  margin-bottom: var(--spacing-md); /* More space after icon */
+  width: 80px; /* Fixed width */
+  height: 80px; /* Fixed height */
+}
+
+.advantage-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Use contain if icons are not square or have transparency */
+  /* border-radius: 15px;  May not be needed if icons are already styled */
+}
+
+.advantage-item h4 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+.advantage-item p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove bottom margin for last element */
+}
+
+/* Portfolio Section */
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-xs); /* Gap between buttons */
+}
+
+.filter-btn {
+  background-color: var(--gray-light);
+  border: 1px solid transparent; /* Base border */
+  padding: 10px 20px; /* Increased padding */
+  margin: 0; /* Remove individual margins, use gap */
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+  border-color: var(--primary-color-dark);
+}
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: var(--spacing-md);
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: block; /* Ensure items are block for display property to work */
+}
+
+.portfolio-image {
+  height: 280px; /* Increased height */
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Longer transition for image zoom */
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 27, 38, 0.8); /* Darker, slightly blueish overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+}
+
+.portfolio-overlay h4 {
+  color: var(--white);
+  margin-bottom: var(--spacing-xs);
+  transform: translateY(20px); /* Start from bottom */
+  transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s; /* Delayed transition */
+  opacity: 0;
+  font-size: 20px;
+}
+
+.portfolio-overlay p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--spacing-md);
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+  opacity: 0;
+  font-size: 15px;
+  max-width: 90%; /* Prevent text from touching edges */
+}
+
+.portfolio-overlay .btn-secondary {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.3s, opacity 0.4s ease 0.3s;
+  opacity: 0;
+}
+
+.portfolio-overlay .btn-secondary:hover {
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-overlay h4,
+.portfolio-item:hover .portfolio-overlay p,
+.portfolio-item:hover .portfolio-overlay .btn-secondary {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-image img {
+  transform: scale(1.1);
+}
+
+
+/* Partners Section */
+.partners {
+    background-color: var(--gray-light); /* Light background */
+}
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+  padding: var(--spacing-sm) 0; /* Padding for better visual */
+}
+
+.partners-track {
+  display: flex;
+  /* animation: scrollPartners 20s linear infinite; Longer animation duration */
+  width: calc(250px * 12); /* Assuming 6 items duplicated = 12 items, and each item is approx 250px wide. Adjust if needed */
+  animation: scrollPartners 30s linear infinite;
+
+}
+
+.partner-item {
+  flex: 0 0 250px; /* Fixed width for partner items */
+  /* min-width: 200px; Adjusted min-width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md);
+  height: 100px; /* Fixed height for consistency */
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 60px; /* Max height for logos */
+  object-fit: contain;
+  filter: grayscale(100%); /* Grayscale by default */
+  opacity: 0.7;
+  transition: var(--transition);
+}
+.partner-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scrolls one full set of duplicated items */
+  }
+}
+
+
+/* Contacts Section */
+.contacts {
+  background-color: var(--gray-light); /* Use light gray */
+}
+.contacts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start; /* Align icon to top of text */
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-icon {
+  margin-right: var(--spacing-sm);
+  width: 24px; /* Fixed width for icon */
+  text-align: center; /* Center FontAwesome icon */
+  /* height: 24px; Not needed if using FontAwesome */
+  /* display: flex; align-items: center; justify-content: center; */
+  color: var(--primary-color); /* Color for icons */
+  font-size: 20px; /* Size for FontAwesome icons */
+  margin-top: 3px; /* Fine-tune vertical alignment */
+}
+
+
+.contact-text h4 {
+  margin-bottom: var(--spacing-xs);
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+.contact-text p, .contact-text p a {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.contact-text p a:hover {
+    color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  margin-top: var(--spacing-md);
+  gap: var(--spacing-sm); /* Gap between links */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  /* margin-right: var(--spacing-sm); Use gap on parent */
+  background-color: var(--gray-medium); /* Slightly darker than page bg */
+  border-radius: 50%;
+  transition: var(--transition);
+  color: var(--secondary-color); /* Icon color */
+}
+.social-link i {
+    font-size: 20px;
+}
+
+.social-link:hover {
+
+  color: var(--white);
+  transform: scale(1.1) rotate(10deg);
+}
+
+
+.contact-map iframe {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 100%; /* Make map take full height of its column */
+  min-height: 400px; /* Minimum height for the map */
+  box-shadow: var(--shadow);
+}
+
+/* FAQ Section */
+.faq {
+    background-color: var(--white); /* Or var(--gray-light) for slight contrast */
+}
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  /* background-color: var(--white); No, parent has it */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.faq-item.active .faq-question {
+  background-color: var(--gray-light); /* Highlight active question */
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+
+.faq-question h4 {
+  margin-bottom: 0;
+  flex: 1;
+  font-size: 18px;
+  color: var(--secondary-color);
+  font-weight: 500; /* Less bold for question */
+}
+
+.faq-toggle {
+  position: relative;
+  width: 20px; /* Slightly larger toggle */
+  height: 20px;
+  flex-shrink: 0;
+  margin-left: var(--spacing-sm);
+}
+
+.faq-toggle span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-toggle span:last-child {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq-item.active .faq-toggle span:first-child { /* Horizontal bar of plus becomes part of X */
+  transform: translateY(-50%) rotate(45deg);
+}
+.faq-item.active .faq-toggle span:last-child {  /* Vertical bar of plus becomes part of X */
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+
+.faq-answer {
+  padding: 0 var(--spacing-md);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+.faq-answer p {
+    color: var(--gray-dark);
+    line-height: 1.7;
+    margin-bottom: 0; /* Remove default p margin */
+}
+
+.faq-item.active .faq-answer {
+  padding: var(--spacing-md);
+  max-height: 300px; /* Adjust as needed for content */
+}
+
+
+/* Contact Form Section */
+.contact-form {
+  background-color: var(--gray-light);
+}
+
+.form-container {
+  max-width: 700px; /* Slightly smaller form */
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.form-container h3 {
+  margin-bottom: var(--spacing-xs);
+  font-size: 28px; /* Larger heading for form */
+}
+.form-container h3 i {
+    margin-right: var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.form-container p {
+  margin-bottom: var(--spacing-lg); /* More space before form fields */
+  color: var(--gray-dark);
+  font-size: 17px;
+}
+
+#feedback-form {
+  text-align: left;
+}
+#feedback-form .btn-primary i {
+    margin-right: 8px;
+}
+
+
+/* Responsive adjustments for sections.css */
+@media (max-width: 1024px) {
+  .about-container,
+  .contacts-container,
+  .promo-container {
+    grid-template-columns: 1fr ;
+    gap: var(--spacing-lg); /* Increase gap when stacked */
+  }
+  .about-image img {
+      max-height: 350px;
+  }
+  .promo-container {
+      text-align: center;
+  }
+  .promo-timer {
+      justify-content: center; /* Center timer items when stacked */
+  }
+  .contact-map iframe {
+      height: 350px; /* Adjust map height for stacked layout */
+  }
+}
+
+@media (max-width: 767px) {
+
+   .service-item p {
+    min-height: auto;
+  }
+  .promo-timer {
+    flex-wrap: wrap; /* Allow timer items to wrap */
+    gap: var(--spacing-xs);
+  }
+  .timer-item {
+      min-width: 60px;
+      padding: var(--spacing-xs);
+  }
+  .timer-value {
+      font-size: 24px;
+  }
+  .timer-label {
+      font-size: 10px;
+  }
+  .process-step {
+      padding-left: 50px; /* Adjust for smaller screens */
+      margin-bottom: var(--spacing-md);
+  }
+  .step-number {
+      width: 35px;
+      height: 35px;
+      font-size: 16px;
+  }
+   .process-step::before {
+      left: 17px; /* Adjust line position */
+      top: 17px;
+  }
+  .portfolio-image {
+      height: 220px;
+  }
+   .contact-map iframe {
+      height: 300px;
+  }
+  .faq-question h4 {
+      font-size: 16px;
+  }
+  .form-container {
+      padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 576px) {
+    .partner-item {
+        flex-basis: 180px; /* Smaller partner items on very small screens */
+    }
+    .partners-track {
+        /* Adjust width if partner item size changes significantly */
+        width: calc(180px * 12);
+    }
+    .service-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .advantage-icon {
+        width: 70px;
+        height: 70px;
+    }
+}

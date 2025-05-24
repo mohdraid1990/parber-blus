@@ -1,0 +1,66 @@
+/* Banner Styles */
+.banner {
+
+  min-height: 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/banner.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  position: relative;
+  padding-top: 70px;
+}
+
+.banner-container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-content {
+  max-width: 600px;
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin-bottom: var(--spacing-sm);
+  animation: fadeInUp 1s ease-out;
+}
+
+.banner h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.banner .btn-primary {
+  animation: fadeInUp 1.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .banner {
+    height: auto;
+    padding: 120px 0 80px;
+  }
+  
+  .banner h1 {
+    font-size: 32px;
+  }
+  
+  .banner h2 {
+    font-size: 20px;
+  }
+}
