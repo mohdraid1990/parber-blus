@@ -10,52 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Initialize Intersection Observer for animations
-  const animatedElements = document.querySelectorAll('.service-item, .advantage-item, .portfolio-item, .process-step');
-  
-  const animationObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-        animationObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  animatedElements.forEach(element => {
-    animationObserver.observe(element);
-    
-    // Add hover animation for interactive elements
-    element.addEventListener('mouseenter', function() {
-      this.classList.add('hover-animated');
-    });
-    
-    element.addEventListener('mouseleave', function() {
-      this.classList.remove('hover-animated');
-    });
-  });
-  
-  // Animate services on hover
-  const serviceItems = document.querySelectorAll('.service-item');
-  
-  serviceItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-      const icon = this.querySelector('.service-icon img');
-      
-      if (icon) {
-        icon.style.transform = 'scale(1.1) rotate(5deg)';
-        icon.style.transition = 'transform 0.3s ease';
-      }
-    });
-    
-    item.addEventListener('mouseleave', function() {
-      const icon = this.querySelector('.service-icon img');
-      
-      if (icon) {
-        icon.style.transform = 'scale(1) rotate(0deg)';
-      }
-    });
-  });
+
+
   
   // Animate portfolio items
   const portfolioImages = document.querySelectorAll('.portfolio-image');
