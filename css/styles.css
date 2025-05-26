@@ -184,7 +184,9 @@ textarea {
   border: 1px solid var(--gray-medium);
   border-radius: var(--border-radius);
   font-size: 16px;
-  font-family: var(--font-family-main); /* Ensure form elements use the main font */
+  font-family: var(
+    --font-family-main
+  ); /* Ensure form elements use the main font */
   transition: var(--transition);
 }
 
@@ -265,7 +267,6 @@ textarea {
 .error-message {
   color: red;
   font-size: 17px;
-  
 }
 input.error,
 textarea.error,
@@ -354,9 +355,7 @@ select.error {
   border-radius: var(--border-radius);
   position: relative;
   transform: translateY(-50px) scale(0.95);
-  transition:
-    transform 0.3s ease-out,
-    opacity 0.3s ease-out;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   opacity: 0; /* Start hidden for transition */
 }
 
@@ -470,5 +469,11 @@ select.error {
   }
   .modal-content {
     max-width: 90%;
+  }
+  .form-agreement label {
+    font-size: 10px;
+  }
+  .error-message {
+    font-size: 10px;
   }
 }
