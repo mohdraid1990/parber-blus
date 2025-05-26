@@ -26,13 +26,12 @@
 
 .service-icon {
   margin: 0 auto var(--spacing-sm); /* Center icon and add bottom margin */
-  width: 100px; /* Fixed width for icon container */
-  height: 100px; /* Fixed height for icon container */
+ 
 }
 
 .service-icon img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover; /* Or contain, depending on icons */
   border-radius: 15px; /* Adjusted radius */
 }
@@ -726,9 +725,7 @@
   font-size: 17px;
 }
 
-#feedback-form {
-  text-align: left;
-}
+
 #feedback-form .btn-primary i {
     margin-right: 8px;
 }
@@ -810,10 +807,7 @@
         /* Adjust width if partner item size changes significantly */
         width: calc(180px * 12);
     }
-    .service-icon {
-        width: 80px;
-        height: 80px;
-    }
+   
     .advantage-icon {
         width: 70px;
         height: 70px;
