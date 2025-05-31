@@ -1,66 +1,146 @@
-/* Banner Styles */
+/* Основной контейнер баннера */
 .banner {
+  margin-top: 90px;
+  position: relative;
+  overflow: hidden;
+}
 
-  min-height: 600px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/banner.webp');
-  background-size: cover;
-  background-position: center;
+/* Контейнер галереи изображений */
+.banner-gallery {
   display: flex;
-  align-items: center;
-  color: var(--white);
+  gap: 5px;
   position: relative;
-  padding-top: 70px;
 }
 
-.banner-container {
+/* Стили для каждого элемента баннера */
+.banner-item {
+  flex: 1;
   position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
+}
+
+/* Стили для изображений */
+.banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: block;
+}
+
+/* Эффект при наведении на изображение */
+.banner-item:hover {
+  flex: 2; /* Увеличение пространства для активного элемента */
+  z-index: 10;
+}
+
+/* Масштабирование изображения при наведении */
+.banner-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Эффект для неактивных изображений при наведении */
+.banner-gallery:hover .banner-item:not(:hover) {
+  flex: 0.8; /* Уменьшение пространства для неактивных элементов */
+  filter: brightness(0.7);
+  opacity: 0.8;
+}
+
+/* Стили для кнопки (правый нижний угол) */
+.btn-banner {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  transform: translateX(0) scale(1);
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 1s ease;
+  z-index: 20;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  overflow: hidden; /* Для косой линии */
+}
+
+/* Косая линия справа от кнопки */
+.btn-banner::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-right: 3px solid #ff7f00;
+  transform: skewX(-20deg);
+  transform-origin: top right;
+  transition: all 0.5s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.btn-banner:hover {
+  background-color: #ff7f00;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Увеличение косой линии при наведении */
+.btn-banner:hover::after {
+  width: 100%;
+  border-right: 3px solid #fff;
+}
+
+/* Тень при наведении на элемент (справа налево) */
+.banner-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+  transition: all 0.5s ease;
   z-index: 2;
+  pointer-events: none;
+  border-radius: 12px;
 }
 
-.banner-content {
-  max-width: 600px;
+/* Показ тени при наведении */
+.banner-item:hover::before {
+  right: 0;
 }
 
-.banner h1 {
-  font-size: 48px;
-  margin-bottom: var(--spacing-sm);
-  animation: fadeInUp 1s ease-out;
-}
-
-.banner h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: var(--spacing-lg);
-  animation: fadeInUp 1.2s ease-out;
-}
-
-.banner .btn-primary {
-  animation: fadeInUp 1.4s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 767px) {
-  .banner {
+/* Адаптация для мобильных устройств */
+@media (max-width: 991px) {
+  .banner-gallery {
+    flex-direction: column;
     height: auto;
-    padding: 120px 0 80px;
   }
   
-  .banner h1 {
-    font-size: 32px;
+  .banner-item {
+    height: 250px;
   }
   
-  .banner h2 {
-    font-size: 20px;
+  .banner-item:hover {
+    flex: 1.5;
+  }
+  
+  .banner-gallery:hover .banner-item:not(:hover) {
+    flex: 0.9;
+  }
+  
+  .btn-banner {
+    right: 15px;
+    bottom: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
